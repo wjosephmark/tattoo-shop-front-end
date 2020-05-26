@@ -4,6 +4,8 @@ import { useRoutes, A } from "hookrouter";
 import App from "./components/app";
 
 import Auth from "./pages/auth"
+import Artists from "./pages/artists"
+import Bookings from "./pages/bookings"
 
 import "./style/main.scss";
 
@@ -15,11 +17,16 @@ function Main() {
     if(loggedInStatus === "Logged In"){
       return({
         "/": () => <App />,
-        "/auth": () => <Auth />
+        "/artists": () => <Artists />,
+        "/bookings": () => <Bookings />,
+        "/auth": () => <Auth loggedInStatus={loggedInStatus} setLoggedInStatus={setLoggedInStatus}/>
+
       })
     } else {
       return({
         "/": () => <App />,
+        "/artists": () => <Artists />,
+        "/bookings": () => <Bookings />,
         "/auth": () => <Auth loggedInStatus={loggedInStatus} setLoggedInStatus={setLoggedInStatus}/>
       })
     }
@@ -33,12 +40,23 @@ function Main() {
     return(
       <div>
         <div className="nav-wrapper">
+
           <div className="nav-link-wrapper">
             <A href="/">Home</A>
           </div>
+
+          <div className="nav-link-wrapper">
+            <A href="/artists">Artists</A>
+          </div>
+
+          <div className="nav-link-wrapper">
+            <A href="/bookings">Bookings</A>
+          </div>
+
           <div className="nav-link-wrapper">
             <A href="/auth">Employee Login</A>
           </div>
+
           <div>
             <button className="btn" onClick={() => handleSignOut()}>Sign Out</button>
           </div>
@@ -50,12 +68,23 @@ function Main() {
     return(
       <div>
         <div className="nav-wrapper">
+
           <div className="nav-link-wrapper">
             <A href="/">Home</A>
           </div>
+          
+          <div className="nav-link-wrapper">
+            <A href="/artists">Artists</A>
+          </div>
+
+          <div className="nav-link-wrapper">
+            <A href="/bookings">Bookings</A>
+          </div>
+
           <div className="nav-link-wrapper">
             <A href="/auth">Employee Login</A>
           </div>
+
         </div>
         {useRoutes(routes())}
       </div>
