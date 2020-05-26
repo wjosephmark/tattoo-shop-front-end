@@ -53,10 +53,6 @@ function Main() {
             <A href="/bookings">Bookings</A>
           </div>
 
-          <div className="nav-link-wrapper">
-            <A href="/auth">Employee Login</A>
-          </div>
-
           <div>
             <button className="btn" onClick={() => handleSignOut()}>Sign Out</button>
           </div>

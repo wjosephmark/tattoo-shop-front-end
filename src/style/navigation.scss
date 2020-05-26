@@ -1,0 +1,18 @@
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .nav-link-wrapper{
+        font-size: 20px;
+
+        A{
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+}
