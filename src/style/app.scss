@@ -1,0 +1,53 @@
+.app{
+    background-color: rgb(92, 44, 44);
+    min-height: 1000px;
+
+    .content-wrapper{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .heading-wrapper{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .heading-background-wrapper{
+                position: relative;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .background{
+                    position: absolute;
+                    border-radius: 18px;
+                    width: 55%;
+                }
+                .logo-wrapper{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 42%;
+                    height: 275px;
+                    background-color: rgba(255, 255, 255, .2);
+                    border-radius: 18px;
+
+                    .logo { 
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 70%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}   

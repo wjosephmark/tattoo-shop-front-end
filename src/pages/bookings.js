@@ -1,7 +1,13 @@
 import React, {useState, useEffect} from "react"
+import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-react-schedule'
+
 
 export default function Bookings() {
     return(
-        <h1>Hello from bookings.</h1>
+        <div className="app">
+            <ScheduleComponent>
+                <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+            </ScheduleComponent>
+        </div>
     )
 }

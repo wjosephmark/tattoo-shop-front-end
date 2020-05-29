@@ -2,6 +2,10 @@ import React, {useState, useEffect} from "react"
 
 export default function Auth() {
     return(
-        <h1>Hello from auth.</h1>
+        <div className="app">
+            <div>
+                <h1>Hello from Auth</h1>
+            </div>
+        </div>
     )
 }

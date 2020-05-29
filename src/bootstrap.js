@@ -6,12 +6,14 @@ import App from "./components/app";
 import Auth from "./pages/auth"
 import Artists from "./pages/artists"
 import Bookings from "./pages/bookings"
+import Contact from "./pages/contact"
 
 import "./style/main.scss";
 
 
 function Main() {
-  const [loggedInStatus, setLoggedInStatus] = useState("Not Logged In")
+  // const [loggedInStatus, setLoggedInStatus] = useState("Not Logged In")
+  const [loggedInStatus, setLoggedInStatus] = useState("Logged In")
   
   const routes = () => {
     if(loggedInStatus === "Logged In"){
@@ -19,6 +21,7 @@ function Main() {
         "/": () => <App />,
         "/artists": () => <Artists />,
         "/bookings": () => <Bookings />,
+        "/contact": () => <Contact />,
         "/auth": () => <Auth loggedInStatus={loggedInStatus} setLoggedInStatus={setLoggedInStatus}/>
 
       })
@@ -27,6 +30,7 @@ function Main() {
         "/": () => <App />,
         "/artists": () => <Artists />,
         "/bookings": () => <Bookings />,
+        "/contact": () => <Contact />,
         "/auth": () => <Auth loggedInStatus={loggedInStatus} setLoggedInStatus={setLoggedInStatus}/>
       })
     }
@@ -51,6 +55,10 @@ function Main() {
 
           <div className="nav-link-wrapper">
             <A href="/bookings">Bookings</A>
+          </div>
+
+          <div className="nav-link-wrapper">
+            <A href="/contact">Contact</A>
           </div>
 
           <div>
@@ -79,6 +87,10 @@ function Main() {
 
           <div className="nav-link-wrapper">
             <A href="/auth">Employee Login</A>
+          </div>
+
+          <div className="nav-link-wrapper">
+            <A href="/contact">Contact</A>
           </div>
 
         </div>
