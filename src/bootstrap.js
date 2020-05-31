@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useRoutes, A } from "hookrouter";
 import App from "./components/app";
+
+import Icons from "./components/helpers/icons"
 
 import Auth from "./pages/auth"
 import Artists from "./pages/artists"
 import Bookings from "./pages/bookings"
 import Contact from "./pages/contact"
 
+
 import "./style/main.scss";
 
 
 function Main() {
   // const [loggedInStatus, setLoggedInStatus] = useState("Not Logged In")
+
+  Icons()
+
   const [loggedInStatus, setLoggedInStatus] = useState("Logged In")
   
   const routes = () => {

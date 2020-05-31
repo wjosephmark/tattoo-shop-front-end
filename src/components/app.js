@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 
 export default class App extends Component {
   render() {
@@ -16,10 +19,35 @@ export default class App extends Component {
             </div>
           </div>
 
-          <div className="contact-container">
-            <div className="address-container">
-              <a href="https://www.google.com/maps/dir/''/slc+ink/@40.7438352,-111.9654013,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x8752f53aa4bb0ae3:0x776ab595c1ab7241!2m2!1d-111.8915845!2d40.7438587" />
+          <div className="contact-wrapper">
+
+            {/* <div className="address-wrapper"> */}
+              <a
+                className="address" 
+                href="https://www.google.com/maps/dir/''/slc+ink/@40.7438352,-111.9654013,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x8752f53aa4bb0ae3:0x776ab595c1ab7241!2m2!1d-111.8915845!2d40.7438587"
+                target="blank"  
+              >
+              SLC INK TATTOO 1150 So. Main St. SLC, UT
+              </a>
+            {/* </div> */}
+
+            <div className="icons-wrapper">
+              <FontAwesomeIcon icon="phone" />
             </div>
+
+            {/* <div className="hours-wrapper"> */}
+              <p className="hours">
+              <u>Studio Hours:</u><br/>
+              <br/>
+              Monday - Saturday:  12pm-8pm,<br/>
+              Sunday:   12pm-6pm
+              </p>
+            {/* </div> */}
+
+            <div className="appointment-text">
+              <p>Typically, we do tattoos by appointment, however WALK - INS can be done time permitting. Please call ahead to ensure that we can accommodate you, 801-596-2061.</p>
+            </div>
+
           </div>
 
         </div>

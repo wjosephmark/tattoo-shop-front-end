@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/bottega-code-school/js-builder",
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "@syncfusion/ej2-react-schedule": "^18.1.54",
     "ajv": "^5.5.2",
     "autoprefixer": "^9.1.0",
